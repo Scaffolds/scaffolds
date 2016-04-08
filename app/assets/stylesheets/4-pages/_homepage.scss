@@ -1,0 +1,51 @@
+// Header
+
+.pages-index {
+  background-image: linear-gradient(to bottom, rgba(122, 60, 114, .5) 100%, rgba(178, 111, 170, .5) 0%), image-url("landscape.jpg");
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 80vh;
+
+  .menu {
+    padding-top: rem(10);
+
+    .item {
+      color: #fff;
+    }
+  }
+
+  .jumbotron {
+    margin-top: rem(100);
+    text-align: center;
+
+    h1 {
+      font-size: $xx-large;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: $medium;
+    }
+  }
+
+  .image-cluster {
+    position: relative;
+    text-align: center;
+
+    .template-img {
+      width: 450px;
+      position: absolute;
+      top: 5%;
+
+      &:nth-child(1) {
+        left: 0;
+      }
+
+      &:nth-child(even) {
+        position: relative;
+        width: 550px;
+      }
+    }
+  }
+}

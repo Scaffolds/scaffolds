@@ -1,0 +1,25 @@
+// Typography
+
+$font-url: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700|Lato:400,100,300,700";
+
+@import url($font-url);
+
+$default-font-stack: "Avenir", "Source Sans Pro", "Lato", sans-serif;
+
+ // Sizing
+
+$base-size: rem(14);
+$modular-scale-base: $base-size;
+
+$small: modular-scale(-1);
+$x-small: modular-scale(-2);
+$xx-small: modular-scale(-3);
+
+$medium: modular-scale(1);
+$x-medium: modular-scale(2);
+$xx-medium: modular-scale(3);
+
+$large: modular-scale(4);
+$x-large: modular-scale(5);
+$xx-large: modular-scale(6);
+
