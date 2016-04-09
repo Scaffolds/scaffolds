@@ -1,0 +1,15 @@
+html {
+  font-size: $base-size;
+}
+body {
+  font-family: $default-font-stack;
+}
+
+p {
+  font-family: "Avenir", "Source Sans Pro", "Lato" sans-serif;
+  font-size: $base-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Avenir", "Source Sans Pro", sans-serif;
+}
