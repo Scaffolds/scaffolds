@@ -5,7 +5,7 @@
   background-size: cover, cover;
   background-repeat: no-repeat;
   color: #fff;
-  height: 80vh;
+  // height: 80vh;
 
   .menu {
     padding-top: rem(10);
@@ -44,7 +44,7 @@
 
       &.magnify {
         @include filter(none);
-        @include transform(scale(1.1) translateX(-170px));
+        @include transform(scale(1.15) translateX(-170px));
         z-index: 2;
       }
     }
