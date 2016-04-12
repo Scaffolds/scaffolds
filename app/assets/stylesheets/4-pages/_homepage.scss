@@ -1,19 +1,56 @@
-// Header
+// ======================
+//  Header
+// ======================
 
 .pages-index {
   background-image: linear-gradient(to bottom, rgba(122, 60, 114, .5) 100%, rgba(178, 111, 170, .5) 0%), image-url("landscape.jpg");
   background-size: cover, cover;
   background-repeat: no-repeat;
   color: #fff;
-  // height: 80vh;
 
-  .menu {
+  // ======================
+  //  Navbar
+  // ======================
+
+  .ui.secondary.menu {
+    margin-left: rem(-19);
     padding-top: rem(10);
 
     .item {
       color: #fff;
+      outline: 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 7%;
+        border-bottom: 3px solid #fff;
+        width: 88%;
+        opacity: 1;
+        transition-duration: .6s;
+        transform: translateY(-99px);
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: #fff;
+
+        &::after {
+          transform: translateY(3px);
+        }
+      }
     }
   }
+
+  // ======================
+  //  end ^^ Navbar
+  // ======================
+
+  // ======================
+  //  Welcome section
+  // ======================
 
   .jumbotron {
     margin-top: rem(100);
@@ -27,6 +64,39 @@
 
     p {
       font-size: $medium;
+    }
+
+    .basic.ui.button.all-themes {
+      background: transparent !important; // Override semantic ui important declaration for button
+      border: 2px solid #fff;
+      border-radius: 0;
+      box-shadow: none;
+      color: #fff !important; // Override semantic ui important declaration for button
+      padding: rem(15);
+      position: relative;
+      transition-duration: .6s;
+      width: 351px;
+      z-index: 1;
+
+      &:hover {
+        color: $primary-color !important;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        width: 0%;
+        height: 100%;
+        z-index: -1;
+        transition-duration: .6s;
+      }
     }
   }
 
@@ -49,4 +119,100 @@
       }
     }
   }
+  
+  // ======================
+  //  end ^^ Welcome section
+  // ======================
+
 }
+
+// ======================
+//  end ^^ Header
+// ======================
+
+// ======================
+//  Featured section
+// ======================
+
+.featured {
+  // margin-bottom: rem(40);
+  // padding-top: rem(45);
+  // padding-bottom: rem(45);
+
+  .ui.grid.container {
+    border-bottom: 1px solid $lines;
+    padding-top: rem(85);
+    padding-bottom: rem(85);
+
+    .featured-theme-info {
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(center);
+
+      .featured-theme-name {
+        font-size: $xx-medium;
+      }
+    }
+  }
+}
+
+// ======================
+//  end ^^ Featured section
+// ======================
+
+// ======================
+//  Trending section
+// ======================
+
+.trending {
+  // margin-bottom: rem(40);
+  // padding-top: rem(35);
+  // padding-bottom: rem(45);
+
+  .ui.grid.container {
+    border-bottom: 1px solid $lines;
+    padding-top: rem(85);
+    padding-bottom: rem(85);
+  }
+
+  .metadata {
+    margin-bottom: rem(15);
+
+    div:not(.release-date) {
+      display: flex;
+      margin-top: rem(5);
+      margin-bottom: rem(-5);
+
+      .theme-name {
+        font-size: $medium;
+        flex-grow: 1;
+      }
+
+      .likes {
+        margin-right: rem(-6);
+      }
+    }
+  }
+}
+
+// ======================
+//  end ^^ Trending section
+// ======================
+
+// ======================
+//  shared => featured, trending
+// ======================
+
+.title {
+  font-size: $x-medium;
+}
+
+.actions {
+  .basic.ui.button {
+    border-radius: 0;
+  }
+}
+
+// ======================
+//  end_shared => featured, trending
+// ======================

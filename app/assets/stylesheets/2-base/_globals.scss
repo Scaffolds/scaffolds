@@ -2,12 +2,13 @@ html {
   font-size: $base-size;
 }
 body {
+  color: $body-text;
   font-family: $default-font-stack;
 }
 
 p {
   font-family: "Avenir", "Source Sans Pro", "Lato" sans-serif;
-  font-size: $base-size;
+  font-size: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,4 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 img {
   border: 0;
   max-width: 100%;
+}
+
+main {
+  margin-top: rem(45);
 }
