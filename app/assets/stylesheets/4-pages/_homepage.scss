@@ -135,14 +135,9 @@
 // ======================
 
 .featured {
-  // margin-bottom: rem(40);
-  // padding-top: rem(45);
-  // padding-bottom: rem(45);
 
   .ui.grid.container {
-    border-bottom: 1px solid $lines;
-    padding-top: rem(85);
-    padding-bottom: rem(85);
+    @extend %visually-seperate-section;
 
     .featured-theme-info {
       @include display(flex);
@@ -165,14 +160,9 @@
 // ======================
 
 .trending {
-  // margin-bottom: rem(40);
-  // padding-top: rem(35);
-  // padding-bottom: rem(45);
 
   .ui.grid.container {
-    border-bottom: 1px solid $lines;
-    padding-top: rem(85);
-    padding-bottom: rem(85);
+    @extend %visually-seperate-section;
   }
 
   .metadata {
@@ -197,6 +187,39 @@
 
 // ======================
 //  end ^^ Trending section
+// ======================
+
+// ======================
+//  CTA section
+// ======================
+
+.call-to-action {
+
+  .ui.grid.container {
+    @extend %visually-seperate-section;
+    text-align: center;
+
+    .massive.rocket.icon {
+      color: $primary-color;
+      font-size: $xx-large * 3;
+    }
+
+    .big.message {
+      font-size: $xx-large;
+      font-weight: 100;
+      padding-bottom: rem(15);
+    }
+
+    .basic.ui.button {
+      border-radius: 0;
+      padding: rem(15);
+      width: 351px;
+    }
+  }
+}
+
+// ======================
+//  end ^^ CTA section
 // ======================
 
 // ======================

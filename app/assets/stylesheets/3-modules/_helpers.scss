@@ -1,0 +1,28 @@
+// ======================
+//  Placeholder classes
+// ======================
+
+%visually-seperate-section {
+  border-bottom: 1px solid $lines;
+  padding-top: rem(85);
+  padding-bottom: rem(85);
+}
+
+// ======================
+//  Animations
+// ======================
+
+@include keyframes(pulsate) {
+  0%, 100% {
+    @include transform(scale(1));
+  }
+  25% {
+    @include transform(scale(1.1));
+  }
+  50% {
+    @include transform(scale(1.2));
+  }
+  75% {
+    @include transform(scale(1.3));
+  }
+}

@@ -23,3 +23,29 @@ img {
 main {
   margin-top: rem(45);
 }
+
+.footer {
+  margin-top: rem(35);
+  text-align: center;
+
+  .brand-icons {
+
+    .twitter.icon {
+      color: #60a8aa;
+    }
+    .facebook.icon {
+      color: #304d8a;
+    }
+    .github.icon {
+      color: #333;
+    }
+  }
+
+  .heart.icon {
+    @include animation-name(pulsate);
+    @include animation-duration(.4s);
+    @include animation-timing-function(linear);
+    @include animation-iteration-count(infinite);
+    color: tomato;
+  }
+}
