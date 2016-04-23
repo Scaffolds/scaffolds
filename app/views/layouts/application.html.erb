@@ -2,21 +2,22 @@
 <html>
 <head>
   <title><%= yield(:title) %></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <% class_name = "#{params[:controller]}-#{params[:action]}" %>
 
-<header class="<%= class_name %>">
+<header class="header <%= class_name %>">
   <%= render "partials/navbar" %>
   <%= render "partials/jumbotron" if current_page?(root_path) %>
+  <%= render "partials/mobile_sidebar" %>
 </header>
 
 <%= yield %>
 
 <%= render "partials/footer" %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>

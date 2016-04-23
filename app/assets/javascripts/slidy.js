@@ -1,6 +1,6 @@
 (function () {
   /*  Prevent this script from running on other pages except the root index  */
-  if (location.pathname !== "/") { return false; }
+  if (location.pathname !== "/") return false;
 
   /*
     ==========================
@@ -49,11 +49,11 @@
         ss.view.allImages().eq(index).addClass("magnify");
       }, 5000);
     }
-  }
+  };
 
   simpleSlide.initialize = function () {
     this.controller.functionalSlide();
-  }
+  };
 
   simpleSlide.initialize();
 
