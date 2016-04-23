@@ -11,9 +11,9 @@ $default-font-stack: "Avenir", "Source Sans Pro", "Lato", sans-serif;
 $base-size: rem(14);
 $modular-scale-base: $base-size;
 
-$small: modular-scale(-1);
-$x-small: modular-scale(-2);
 $xx-small: modular-scale(-3);
+$x-small: modular-scale(-2);
+$small: modular-scale(-1);
 
 $medium: modular-scale(1);
 $x-medium: modular-scale(2);
@@ -22,4 +22,11 @@ $xx-medium: modular-scale(3);
 $large: modular-scale(4);
 $x-large: modular-scale(5);
 $xx-large: modular-scale(6);
+
+// Color
+
+$primary-color: #7a3c72;
+$alt-primary: #b26faa;
+$lines: #eee;
+$body-text: #343434;
 

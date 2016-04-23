@@ -2,14 +2,54 @@ html {
   font-size: $base-size;
 }
 body {
+  color: $body-text;
   font-family: $default-font-stack;
 }
 
 p {
   font-family: "Avenir", "Source Sans Pro", "Lato" sans-serif;
-  font-size: $base-size;
+  font-size: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Avenir", "Source Sans Pro", sans-serif;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+main {
+  margin-top: rem(45);
+
+  @media screen and (max-width: 1190px) {
+    margin: auto;
+  }
+}
+
+.footer {
+  margin-top: rem(35);
+  text-align: center;
+
+  .brand-icons {
+
+    .twitter.icon {
+      color: #60a8aa;
+    }
+    .facebook.icon {
+      color: #304d8a;
+    }
+    .github.icon {
+      color: #333;
+    }
+  }
+
+  .heart.icon {
+    @include animation-name(pulsate);
+    @include animation-duration(.4s);
+    @include animation-timing-function(linear);
+    @include animation-iteration-count(infinite);
+    color: tomato;
+  }
 }
