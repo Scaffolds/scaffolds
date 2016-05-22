@@ -13,3 +13,9 @@
 /tmp
 README.rdoc
 /app/assets/images
+
+# Ignore application configuration
+/config/application.yml
+/node_modules
+/package.json
+/.eslintrc.js

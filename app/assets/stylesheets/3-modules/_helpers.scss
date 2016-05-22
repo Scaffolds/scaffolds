@@ -9,6 +9,148 @@
 }
 
 // ======================
+//  Mixins
+// ======================
+
+@mixin oauth-buttons {
+  .facebook-auth {
+    background-color: $facebook-bg;
+    color: #fff;
+    border-radius: 0;
+  }
+
+  .twitter-auth {
+    background-color: $twitter-bg;
+    color: #fff;
+    border-radius: 0;
+  }
+
+  .github-auth {
+    background-color: $body-text;
+    color: #fff;
+    border-radius: 0;
+  }
+}
+
+@mixin auth-section($section) {
+  .#{$section} {
+    text-align: center;
+    padding-top: rem(35);
+
+    .#{$section}-container {
+      margin: 35px auto;
+      border: 1px solid $lines;
+
+      h1 {
+        font-size: $x-medium;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        .be-cool-message {
+          font-size: $small + 0.2;
+          display: block;
+          text-transform: lowercase;
+          font-variant: small-caps;
+        }
+      }
+
+      .oauth.options.group {
+        padding-top: rem(25);
+        transition-duration: 3.6s;
+
+        .option {
+          width: 100%;
+          margin: 15px auto;
+
+          .ui.button {
+            border-radius: 0;
+            width: 80%;
+            padding: 15px 21px;
+
+            .icon {
+              color: #fff;
+              opacity: 1;
+            }
+          }
+
+          @include oauth-buttons;
+
+          &+p {
+            margin: rem(25) auto;
+            font-size: $small + 0.2;
+
+            .show-main-form {
+              cursor: pointer;
+              text-decoration: underline;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+      .main-form {
+        transition-duration: 3s;
+
+        &.hidden {
+          position: absolute;
+          opacity: 0;
+        }
+
+        input {
+          border-radius: 0;
+          padding: 15px 21px;
+          width: 80%;
+          transition-duration: 0.6s;
+
+          &[type="submit"] {
+            background-color: $primary-color;
+            color: #fff;
+            text-transform: uppercase;
+          }
+        }
+
+        .oauth-options {
+          @include oauth-buttons;
+
+          .icon {
+            opacity: 1;
+          }
+        }
+
+        p {
+          margin: 15px auto;
+          font-size: $small + 0.2;
+        }
+
+        &+p {
+          background-color: #fff;
+          transform: translateY(48px);
+          margin-bottom: 25px;
+          position: relative;
+
+          &::before, &::after {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #eee;
+            top: 10px;
+            width: 30%;
+          }
+
+          &::before {
+            left: -2px;
+          }
+
+          &::after {
+            right: -2px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+// ======================
 //  Animations
 // ======================
 

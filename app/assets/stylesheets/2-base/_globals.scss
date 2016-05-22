@@ -4,6 +4,23 @@ html {
 body {
   color: $body-text;
   font-family: $default-font-stack;
+  display: flex;
+  flex-direction: column;
+}
+
+::-moz-selection {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+::selection {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.header {
+  background-position: 0 30%;
+  min-height: 50px;
 }
 
 p {
@@ -22,6 +39,7 @@ img {
 
 main {
   margin-top: rem(45);
+  flex: 1 0 auto;
 
   @media screen and (max-width: 1190px) {
     margin: auto;
@@ -35,13 +53,13 @@ main {
   .brand-icons {
 
     .twitter.icon {
-      color: #60a8aa;
+      color: $twitter-bg;
     }
     .facebook.icon {
-      color: #304d8a;
+      color: $facebook-bg;
     }
     .github.icon {
-      color: #333;
+      color: $body-text;
     }
   }
 
@@ -51,5 +69,11 @@ main {
     @include animation-timing-function(linear);
     @include animation-iteration-count(infinite);
     color: tomato;
+  }
+}
+
+.error_container {
+  .icon, p {
+    color: $primary-color;
   }
 }

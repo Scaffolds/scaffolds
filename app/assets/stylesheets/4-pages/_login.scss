@@ -1,0 +1,26 @@
+// ======================
+//  Header
+// ======================
+
+.header.sessions-new {
+  background-position: 0 30%;
+  min-height: 50px;
+
+  .item[href="/login"] {
+    display: none;
+  }
+}
+
+// ======================
+//  end ^^ Header
+// ======================
+
+// ======================
+//  Section - Login
+// ======================
+
+@include auth-section(login);
+
+// ======================
+//  end ^^ Section - Login
+// ======================

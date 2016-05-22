@@ -1,0 +1,12 @@
+<div class="error_container">
+  <% if object.errors.any? %>
+    <h1>
+      <i class="frown icon"></i>
+    </h1>
+    <% object.errors.full_messages.each do |msg| %>
+      <p>
+        <i class="remove icon"></i> <%= msg %>
+      </p>
+    <% end %>
+  <% end %>
+</div>

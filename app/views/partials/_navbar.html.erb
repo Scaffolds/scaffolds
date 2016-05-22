@@ -4,8 +4,10 @@
 
     <div class="right menu">
       <%= link_to "Themes", "#", class: "item" %>
-      <%= link_to "Create Account / Login", "#", class: "item" %>
+
+      <%= link_to "Create Account / Login", login_path, class: "item" unless logged_in? %>
       <%= link_to "Contact Us", "#", class: "item" %>
+      <%= link_to "Logout", logout_path, method: :delete, class: "item" if logged_in? %>
       <%= link_to raw("Menu <i class='sidebar icon'></i>"), "#", class: "mobile-menu mobile only item" %>
     </div>
   </div>

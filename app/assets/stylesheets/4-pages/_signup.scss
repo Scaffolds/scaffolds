@@ -1,0 +1,27 @@
+// ======================
+//  Header
+// ======================
+
+.header.users-new, .header.users-create {
+  background-position: 0 30%;
+  min-height: 50px;
+
+  .item[href="/login"] {
+    display: none;
+  }
+}
+
+// ======================
+//  end ^^ Header
+// ======================
+
+
+// ======================
+//  Section - Signup
+// ======================
+
+@include auth-section(signup);
+
+// ======================
+//  end ^^ Section - Signup
+// ======================

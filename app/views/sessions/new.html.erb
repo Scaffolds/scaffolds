@@ -1,0 +1,46 @@
+<% provide(:title, "Scaffolds - Login to your account") %>
+
+<main>
+  <section class="login">
+    <div class="stackable ui grid container">
+      <div class="eight wide column login-container">
+        <h1>
+          LOG IN
+        </h1>
+
+        <div class="main-form">
+          <%= form_for :session, url: login_path, html: { class: "ui form" } do |f| %>
+            <div class="field">
+              <%= f.email_field :email, placeholder: "Email Address", required: true %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password, placeholder: "Password", required: true %>
+            </div>
+
+            <div class="field">
+              <%= f.submit "Login", class: "ui button" %>
+            </div>
+          <% end %>
+
+          <p>
+            or login with these:
+          </p>
+
+          <div class="oauth-options">
+            <%= link_to raw("<i class='facebook square icon'></i> facebook"), "/auth/facebook/", class: "ui button facebook-auth"%>
+
+            <%= link_to raw("<i class='twitter icon'></i> twitter"), "/auth/twitter/", class: "ui button twitter-auth"%>
+
+            <%= link_to raw("<i class='github icon'></i> github"), "/auth/github/", class: "ui button github-auth"%>
+          </div>
+        </div>
+
+        <p>
+          Don't have an account?
+          <%= link_to "Sign up", signup_path %>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
