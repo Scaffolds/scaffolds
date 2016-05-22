@@ -19,3 +19,4 @@ README.rdoc
 /node_modules
 /package.json
 /.eslintrc.js
+/coverage
