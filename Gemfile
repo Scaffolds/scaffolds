@@ -51,7 +51,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'figaro'
-  gem 'coveralls', require: false
   gem 'capybara'
 end
 
