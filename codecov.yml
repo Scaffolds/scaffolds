@@ -1,2 +1,8 @@
 codecov:
-  token: ENV['codecov_token']
+  token: ENV['codecov_token'
+  branch: "master"
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"

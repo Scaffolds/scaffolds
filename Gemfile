@@ -52,6 +52,8 @@ group :development, :test do
   gem 'rubocop'
   gem 'figaro'
   gem 'capybara'
+  gem 'simplecov'
+  gem 'codecov', require: false
 end
 
 group :development do
