@@ -1,0 +1,72 @@
+<% provide(:title,  "Scaffolds - Create a new account") %>
+
+<main>
+  <section class="signup">
+    <div class="stackable ui grid container">
+      <div class="eight wide column signup-container">
+        <h1>
+          SIGN UP
+
+          <small class="be-cool-message">
+            BE COOL! SIGN UP WITH THESE:
+          </small>
+        </h1>
+
+        <div class="oauth options group">
+          <div class="option">
+            <%= link_to raw("<i class='facebook square icon'></i> facebook"), "/auth/facebook/", class: "ui button facebook-auth"%>
+          </div>
+
+          <div class="option">
+            <%= link_to raw("<i class='twitter icon'></i> twitter"), "/auth/twitter/", class: "ui button twitter-auth"%>
+          </div>
+
+          <div class="option">
+            <%= link_to raw("<i class='github icon'></i> github"), "/auth/github/", class: "ui button github-auth"%>
+          </div>
+
+          <p>
+            Or sign up with your
+            <span class="show-main-form">Email</span>
+          </p>
+        </div>
+
+        <div class="main-form hidden <%= flash[:notice] %>">
+          <%= form_for @user, html: { class: "ui form" } do |f| %>
+            <%= render "partials/signup_error", object: @user %>
+            <div class="field">
+              <%= f.text_field :fullname, placeholder: "Full Name", minlength: 3, maxlength: 255, pattern: "[a-zA-Z]{3,}(\s[a-zA-Z]{3,})*", required: true, title: "Your fullname must be at least 3 characters long and mustn't be more than 255 characters. Special characters are also not allowed. An example is: Dayo Oladimeji" %>
+            </div>
+
+            <div class="field">
+              <%= f.email_field :email, placeholder: "Email Address", pattern: "[\\w\\-\\d]+(\\.[\\w\\-\\d]+)?@[\\w\\-\\d]+\.[\\w\\-\\d]+", required: true %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password, placeholder: "Password", minlength: 8, required: true %>
+            </div>
+
+            <div class="field">
+              <%= f.submit "Create Account", class: "ui button" %>
+            </div>
+          <% end %>
+
+          <p>Or sign up with: </p>
+
+          <div class="oauth-options">
+            <%= link_to raw("<i class='facebook square icon'></i> facebook"), "/auth/facebook/", class: "ui button facebook-auth"%>
+
+            <%= link_to raw("<i class='twitter icon'></i> twitter"), "/auth/twitter/", class: "ui button twitter-auth"%>
+
+            <%= link_to raw("<i class='github icon'></i> github"), "/auth/github/", class: "ui button github-auth"%>
+          </div>
+        </div>
+
+        <p>
+          Already have an account?
+          <%= link_to "Login", login_path %>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

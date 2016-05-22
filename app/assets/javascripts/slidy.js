@@ -25,7 +25,6 @@
   simpleSlide.controller = {
     functionalSlide: function () {
       var ss = simpleSlide,
-          next = ss.view.next,
           moveBy = 0,
           index = 1;
 
