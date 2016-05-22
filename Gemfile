@@ -30,9 +30,6 @@ gem 'bcrypt', '~> 3.1.7'
 # A modern, concurrent weserver for ruby
 gem 'puma'
 
-# Testing framework that helps simulate how a user would use an app
-gem 'capybara'
-
 # Integrate selenium webdriver with capybara
 gem 'selenium-webdriver'
 gem 'chromedriver-helper'
@@ -54,6 +51,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'figaro'
+  gem 'coveralls', require: false
+  gem 'capybara'
 end
 
 group :development do
