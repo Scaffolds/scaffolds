@@ -25,8 +25,8 @@
   simpleSlide.controller = {
     functionalSlide: function () {
       var ss = simpleSlide,
-          moveBy = 0,
-          index = 1;
+        moveBy = 0,
+        index = 1;
 
       setInterval(function () {
         moveBy += ss.view.imgDimension();
@@ -42,7 +42,7 @@
         });
 
         ss.view.imgContainer.css({
-          marginLeft: `-${moveBy}px`
+          marginLeft: -moveBy
         });
 
         ss.view.allImages().eq(index).addClass("magnify");
