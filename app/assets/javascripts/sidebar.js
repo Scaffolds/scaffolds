@@ -24,8 +24,8 @@
 
   menu.initialize = function () {
     var self = this,
-        menuBtn = self.view.menuBtn,
-        closeBtn = self.view.closeMenuBtn;
+      menuBtn = self.view.menuBtn,
+      closeBtn = self.view.closeMenuBtn;
 
     menuBtn.on("click", function () {
       self.controller.showMenu();

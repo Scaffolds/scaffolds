@@ -15,7 +15,7 @@ module Authenticatable
   def current_user
     @current_user ||= User.find_by(id: cookies.signed[:user_id])
   end
-
+  
   def logged_in?
     current_user.nil? ? false : true
   end
